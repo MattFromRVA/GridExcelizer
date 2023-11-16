@@ -61,3 +61,12 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+################################################################################
+#Ignore Javascript language from github-linguist
+
+*.js linguist-detectable=false
+*.cs linguist-detectable=true
+
+
+
