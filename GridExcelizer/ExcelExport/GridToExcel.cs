@@ -14,6 +14,12 @@ using Fonts = DocumentFormat.OpenXml.Spreadsheet.Fonts;
 
 namespace GridExcelizer.ExcelExport
 {
+
+    /// <summary>
+    /// The ExcelExports class provides functionality to export ASP.NET GridView data to an Excel file.
+    /// It handles various data types including text, numbers, dates, currencies, and percentages.
+    /// </summary>
+
     public class GridToExcel
     {
         private readonly HttpResponse _response;
