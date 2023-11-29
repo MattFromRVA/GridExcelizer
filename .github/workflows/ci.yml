@@ -1,0 +1,24 @@
+name: GridExcelizer CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup MSBuild Path
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    - name: Restore NuGet Packages
+      run: nuget restore GridExcelizer.sln
+
+    - name: Build Solution
+      run: msbuild GridExcelizer.sln /p:Configuration=Release /p:Platform="Any CPU"
